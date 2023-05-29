@@ -1,75 +1,85 @@
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: black;
     overflow: hidden;
-}
-a.fill-div {
-    display: block;
+    margin: 0;
     height: 100%;
+}
+header {
+    font-family: Verdana;
+    font-size: 0.8em;
     width: 100%;
-    text-decoration: none;
+    padding: 20px 50px 20px 50px;
+    text-align: center;
 }
 .container {
-    font-size: 10px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 40em;
     height: 40em;
-    position: relative;
 }
+.center {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
 .sun {
+    background-color: yellow;
+    box-shadow: 0 0 3em white;
+    border-radius: 50%;
     position: absolute;
     top: 15em;
-    left: 15em;
+    left: 18em;
     width: 10em;
     height: 10em;
-    background-color: yellow;
-    border-radius: 50%;
-    box-shadow: 0 0 3em white;
 }
-.earth,.moon {
+.orbit-earth {
     position: absolute;
+    top: 5em;
+    left: 7.8em;
+    width: 30em;
+    height: 30em;
     border-style: solid;
     border-color: white transparent transparent transparent;
     border-width: 0.1em 0.1em 0 0;
     border-radius: 50%;
-}
-.earth {
-    top: 5em;
-    left: 5em;
-    width: 30em;
-    height: 30em;
     animation: orbit 36.5s linear infinite;
 }
-.moon {
-    top: 0;
-    right: 0;
+.orbit-moon {
+    position: absolute;
+    top: 0.4em;
+    right: 0.3em;
     width: 8em;
     height: 8em;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
     animation: orbit 2.7s linear infinite;
 }
-.earth::before,
-.moon::before {
-    content: '';
+.earth {
+    background-color: aqua;
+    box-shadow: 0 0 3em white;
     position: absolute;
-    border-radius: 50%;
-}
-.earth::before {
     top: 2.8em;
     right: 2.8em;
     width: 3em;
     height: 3em;
-    background-color: aqua;
+    border-radius: 50%;
 }
-.moon::before {
+.moon {
+    background-color: silver;
+    position: absolute;
     top: 0.8em;
     right: 0.2em;
     width: 1.2em;
     height: 1.2em;
-    background-color: silver;
+    border-radius: 50%;
 }
+
 @keyframes orbit {
     to {
         transform: rotate(360deg);
