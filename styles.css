@@ -1,12 +1,12 @@
 body {
     background-color: black;
-    overflow: hidden;
     margin: 0;
     height: 100vh; /* Set height to 100% of the viewport */
     display: flex; /* Use Flexbox for centering */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
 header {
@@ -101,4 +101,11 @@ embed {
     to {
         transform: rotate(360deg);
     }
+}
+
+.pdf-embed {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height for the container */
+    max-width: 800px; /* Max width for larger screens */
+    border: none; /* Optional: remove border around the PDF */
 }
