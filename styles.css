@@ -109,3 +109,14 @@ embed {
     max-width: 800px; /* Max width for larger screens */
     border: none; /* Optional: remove border around the PDF */
 }
+
+.download-link {
+    margin-top: 20px; /* Space between PDF and download link */
+    color: tomato; /* Tomato color for the link */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Increased font size for better visibility */
+}
+
+.download-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
